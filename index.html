@@ -12,27 +12,27 @@
 
 <body style="margin : 0px; overflow: hidden;">
 
-  <a-scene arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3">
+  <a-scene embedded arjs>
     <a-assets>
-      <img id="drumsImage" src="./assets/drums.png" />
-      <img id="guitarImage" src="./assets/guitar.png" />
-      <img id="micImage" src="./assets/mic.png" />
-      <img id="pianoImage" src="./assets/piano.png" />
+      <img id="drumsImage" src="./assets/images/drums.png" />
+      <img id="guitarImage" src="./assets/images/guitar.png" />
+      <img id="micImage" src="./assets/images/mic.png" />
+      <img id="pianoImage" src="./assets/images/piano.png" />
     </a-assets>
 
-    <a-marker name="drums" class="ar-marker" type="barcode" value="0">
+    <a-marker name="drums" class="ar-marker" type="pattern" url="./assets/patterns/drums.patt">
       <a-image src="#drumsImage" rotation="90 0 0" position="0 0 0" />
     </a-marker>
 
-    <a-marker name="guitar" class="ar-marker" type="barcode" value="1">
+    <a-marker name="guitar" class="ar-marker" type="pattern" url="./assets/patterns/guitar.patt">
       <a-image src="#guitarImage" rotation="90 0 0" />
     </a-marker>
 
-    <a-marker name="mic" class="ar-marker" type="barcode" value="2">
+    <a-marker name="mic" class="ar-marker" type="pattern" url="./assets/patterns/mic.patt">
       <a-image src="#micImage" rotation="90 0 0" />
     </a-marker>
 
-    <a-marker name="piano" class="ar-marker" type="barcode" value="3">
+    <a-marker name="piano" class="ar-marker" type="pattern" url="./assets/patterns/piano.patt">
       <a-image src="#pianoImage" rotation="90 0 0" />
     </a-marker>
 
